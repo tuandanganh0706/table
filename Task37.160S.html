@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 37.160S</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        var gMenuStructure = {
+            html5: "",
+            css3: "",
+            javascript: "",
+            bootstrap4: "",
+            support: "",
+            price: 0,
+        }
+
+        $(document).ready(function(){
+            var vBtnSignUpBasic = $("#btn-sign-up-basic");
+            vBtnSignUpBasic.on("click", function(){
+                gMenuStructure.html5 = "20";
+                gMenuStructure.css3 = "10";
+                gMenuStructure.javascript = "5";
+                gMenuStructure.bootstrap4 = "4";
+                gMenuStructure.support = "Endless";
+                gMenuStructure.price = "19";
+
+                printMenuStructureToConsole();
+            });
+
+            var vBtnSignUpPro = $("#btn-sing-up-pro");
+            vBtnSignUpPro.on("click", function(){
+                gMenuStructure.html5 = "30";
+                gMenuStructure.css3 = "12";
+                gMenuStructure.javascript = "6";
+                gMenuStructure.bootstrap4 = "3";
+                gMenuStructure.support = "Endless";
+                gMenuStructure.price = "29";
+
+                printMenuStructureToConsole();
+            });
+
+            var vBtnSignUpPremium = $("#btn-sign-up-premium");
+            vBtnSignUpPremium.on("click", function(){
+                gMenuStructure.html5 = "60";
+                gMenuStructure.css3 = "20";
+                gMenuStructure.javascript = "8";
+                gMenuStructure.bootstrap4 = "5";
+                gMenuStructure.support = "Endless";
+                gMenuStructure.price = "49";
+
+                printMenuStructureToConsole();
+            });
+        });
+
+        function printMenuStructureToConsole(){
+            console.log("html5: " + gMenuStructure.html5);
+            console.log("css3: " + gMenuStructure.css3);
+            console.log("javascript: " + gMenuStructure.javascript);
+            console.log("bootstrap4: " + gMenuStructure.bootstrap4);
+            console.log("support: " + gMenuStructure.support);
+            console.log("price per month: " + gMenuStructure.price + "USD");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+             <div class="col-sm-12 text-center">
+                 <h3>Pricing</h3>
+                 <p>Choose a price plan that works for you</p>
+             </div>
+        </div>
+        
+        <div class="row ">
+            <div class="col-sm-4 ">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading pt-3 pb-3 border">
+                        <h2>Basic</h2>
+                    </div>
+                    <div class="panel-body p-2 border small ">
+                        <p><strong>20</strong> HTML5</p>
+                        <p><strong>10</strong> CSS3</p>
+                        <p><strong>5</strong> Javascript</p>
+                        <p><strong>4</strong> Bootstrap4</p>
+                        <p><strong>Endless</strong> Support</p>
+                    </div>
+                    <div class="panel-footer bg-light pt-3 pb-2 border">
+                        <h4>$19</h4>
+                        <p>per month</p>
+                        <button id="btn-sign-up-basic" class="btn btn-success">Sign up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading pt-3 pb-3 border">
+                        <h2>Pro</h2>
+                    </div>
+                    <div class="panel-body p-2 border small">
+                        <p><strong>30</strong> HTML5</p>
+                        <p><strong>12</strong> CSS3</p>
+                        <p><strong>6</strong> Javascript</p>
+                        <p><strong>3</strong> Bootstrap4</p>
+                        <p><strong>Endless</strong> Support</p>
+                    </div>
+                    <div class="panel-footer bg-light pt-3 pb-2 border">
+                        <h4>$29</h4>
+                        <p>per month</p>
+                        <button id="btn-sing-up-pro" class="btn btn-success">Sign up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 ">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading pt-3 pb-3 border">
+                        <h2>Premium</h2>
+                    </div>
+                    <div class="panel-body p-2 border small">
+                        <p><strong>60</strong> HTML5</p>
+                        <p><strong>20</strong> CSS3</p>
+                        <p><strong>8</strong> Javascript</p>
+                        <p><strong>5</strong> Bootstrap4</p>
+                        <p><strong>Endless</strong> Support</p>
+                    </div>
+                    <div class="panel-footer bg-light pt-3 pb-2 border">
+                        <h4>$49</h4>
+                        <p>per month</p>
+                        <button id="btn-sign-up-premium" class="btn btn-success">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
